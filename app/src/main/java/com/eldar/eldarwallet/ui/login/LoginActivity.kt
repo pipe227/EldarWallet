@@ -46,7 +46,7 @@ class LoginActivity : AppCompatActivity(), LoginContract.View {
 
     override fun onLoginSuccess(user: User) {
         Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show()
-        AppConstants.updateUserId(user.id) // Actualiza USER_ID en AppConstants
+        AppConstants.updateUserId(user.id)
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
         finish()
